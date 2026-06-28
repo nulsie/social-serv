@@ -1,3 +1,3 @@
 FROM superseriousbusiness/gotosocial:latest
 
-COPY web/assets/themes/ultra-light.css /gotosocial/web/assets/themes/ultra-light.css
+COPY web/assets/themes/default.css /gotosocial/web/assets/themes/default.css
