@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.instance.Title}}</title>
+    <link rel="stylesheet" href="/assets/custom.css">
+</head>
+<body>
+
+    <main class="container">
+        <!-- Header Section -->
+        <header class="instance-header">
+            <h1 class="instance-title">{{.instance.Title}}</h1>
+            <p class="instance-domain">{{.instance.URI}}</p>
+        </header>
+
+        <!-- Description Section -->
+        <section class="instance-about">
+            <p>{{.instance.Summary}}</p>
+        </section>
+
+        <!-- Functional Action Buttons -->
+        <section class="actions">
+            <a href="/login" class="btn btn-primary">Log In to Account</a>
+            <a href="/admin" class="btn btn-secondary">Admin Dashboard</a>
+        </section>
+
+        <hr class="divider">
+
+        <!-- Client Connectivity Quick Guide -->
+        <section class="client-guide">
+            <h3>Connect From Your Apps</h3>
+            <p>This is a lightweight GoToSocial instance. You can interact with it using any Mastodon-compatible client (like Ivory, Ice Cubes, Mona, or Phanpy).</p>
+            <div class="copy-box">
+                <code>{{.instance.URI}}</code>
+            </div>
+            <small class="hint">Copy this server domain and paste it into your favorite Fediverse app to log in.</small>
+        </section>
+
+        <!-- Footer -->
+        <footer class="instance-footer">
+            <p>Powered by <a href="https://github.com/superseriousbusiness/gotosocial" target="_blank" rel="noopener">GoToSocial</a> • Zero-Budget Stack</p>
+        </footer>
+    </main>
+
+</body>
+</html>
