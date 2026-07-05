@@ -49,32 +49,12 @@ Instance Logo
 {{- end -}}
 {{- end -}}
 
-{{- define "strapUsers" -}}
-{{- with deref .instance.Stats.user_count -}}
-    {{- if eq . 1 -}}
-        <span class="count">{{- . -}}</span> user who has written
-    {{- else -}}
-        <span class="count">{{- . -}}</span> users who have written
-    {{- end -}}
-{{- end -}}
-{{- end -}}
-
 {{- define "strapPosts" -}}
 {{- with deref .instance.Stats.status_count -}}
     {{- if eq . 1 -}}
         <span class="count">{{- . -}}</span> post
     {{- else -}}
         <span class="count">{{- . -}}</span> posts
-    {{- end -}}
-{{- end -}}
-{{- end -}}
-
-{{- define "strapInstances" -}}
-{{- with deref .instance.Stats.domain_count -}}
-    {{- if eq . 1 -}}
-        <span class="count">{{- . -}}</span> other instance
-    {{- else -}}
-        <span class="count">{{- . -}}</span> other instances
     {{- end -}}
 {{- end -}}
 {{- end -}}
@@ -101,6 +81,6 @@ Instance Logo
     <h1>{{- .instance.Title -}}</h1>
 </a>
 {{- if .showStrap }}
-<aside>home to {{ template "strapUsers" . }} {{ template "strapPosts" . }}; peered with {{ template "strapInstances" . }}</aside>
+<aside>a personal fedi server with {{ template "strapPosts" . }}.</aside>
 {{- end }}
 {{- end }}
